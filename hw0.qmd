@@ -1,0 +1,36 @@
+---
+title: "hw0"
+author: "ZhimengL"
+output:  html
+---
+
+```{r solution, echo=FALSE}
+a <- 1
+b <- 3
+c <- 2
+
+# Compute delta
+Delta <- b^2 - 4*a*c
+
+# Calculate the solutions using calculated delta
+if (Delta > 0) {
+  x1 <- (-b + sqrt(Delta)) / (2*a)
+  x2 <- (-b - sqrt(Delta)) / (2*a)
+  solutions <- c(x1, x2)
+} else if (Delta == 0) {
+  x1 <- -b / (2*a)
+  solutions <- x1
+} else {
+  solutions <- NULL
+}
+
+solutions
+
+x <- seq(-3, 1, length = 300)
+
+plot(x, a*x^2 + b*x + c, type = "l")
+
+abline(h = 0, lty = 2)
+
+```
+We can see from the plot that the function intersects to the line y=0 twice when x=-1 and x=-2, indicating there are 2 solutions for the function, which is consistent as what we solved.
