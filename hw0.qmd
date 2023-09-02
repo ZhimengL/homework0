@@ -1,10 +1,13 @@
 ---
 title: "hw0"
 author: "ZhimengL"
-output:  html
+format: html
+execute: 
+  echo: false
 ---
+## Solution and Plot
 
-```{r solution, echo=FALSE}
+```{r solution}
 a <- 1
 b <- 3
 c <- 2
@@ -26,11 +29,12 @@ if (Delta > 0) {
 
 solutions
 
-x <- seq(-3, 1, length = 300)
+x <- seq(-3, 3, length = 300)
 
 plot(x, a*x^2 + b*x + c, type = "l")
 
 abline(h = 0, lty = 2)
 
 ```
-We can see from the plot that the function intersects to the line y=0 twice when x=-1 and x=-2, indicating there are 2 solutions for the function, which is consistent as what we solved.
+## Explanation
+From the plot, it's clear that the function intersects the line y=0 at x=−1 and x=−2, confirming the two solutions we derived. If the function had only one solution, the plot would show a single intersection point, and if there were no solutions, no intersections would be observed."
